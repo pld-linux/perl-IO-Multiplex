@@ -8,13 +8,12 @@
 Summary:	IO::Multiplex - Manage IO on many file handles
 Summary(pl):	IO::Multiplex - zarz±dzanie operacjami we/wy na wielu uchwytach plików
 Name:		perl-IO-Multiplex
-Version:	1.07
+Version:	1.08
 Release:	1
 License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	77def312f282bb2ed0a9c68317853c6b
-Patch0:		%{name}-udptest-linux26.patch
+# Source0-md5:	b27e0eb03f85cfd04b3e29953cfd4444
 BuildRequires:	perl-devel >= 5.8
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
@@ -37,7 +36,6 @@ nas³uchuj±cych gniazd.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-%patch -p1
 
 %build
 %{__perl} Makefile.PL \
