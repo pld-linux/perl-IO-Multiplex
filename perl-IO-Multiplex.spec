@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	IO
-%define	pnam	Multiplex
+%define		pdir	IO
+%define		pnam	Multiplex
 Summary:	IO::Multiplex - manage IO on many file handles
 Summary(pl):	IO::Multiplex - zarz±dzanie operacjami we/wy na wielu uchwytach plików
 Name:		perl-IO-Multiplex
