@@ -8,13 +8,14 @@
 Summary:	IO::Multiplex - Manage IO on many file handles
 Summary(pl):	IO::Multiplex - zarz±dzanie operacjami we/wy na wielu uchwytach plików
 Name:		perl-IO-Multiplex
-Version:	1.04
-Release:	2
+Version:	1.07
+Release:	1
 License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	d78ca0342ad65988288e3a2198ddbaee
-BuildRequires:	perl-devel >= 5.6
+# Source0-md5:	77def312f282bb2ed0a9c68317853c6b
+Patch0:		%{name}-udptest-linux26.patch
+BuildRequires:	perl-devel >= 5.8
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -36,6 +37,7 @@ nas³uchuj±cych gniazd.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+%patch -p1
 
 %build
 %{__perl} Makefile.PL \
@@ -47,7 +49,8 @@ nas³uchuj±cych gniazd.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT

@@ -1,0 +1,20 @@
+--- IO-Multiplex-1.07/t/200_udp.t.orig	2003-07-30 08:22:08.000000000 +0200
++++ IO-Multiplex-1.07/t/200_udp.t	2003-10-25 00:13:09.749379920 +0200
+@@ -18,7 +18,7 @@
+ use Test;
+ use IO::Socket;
+ use IO::Multiplex;
+-use POSIX qw(ENOTCONN);
++use POSIX qw(ENOTCONN EDESTADDRREQ);
+ 
+ $| = 1;
+ plan tests => 15;
+@@ -103,7 +103,7 @@
+     # when trying to send() a packet.
+     $! = 0;
+     print $fh $msg2;
+-    ok ($! == ENOTCONN) || warn "DEBUG: bang = [$!](".($!+0).")";
++    ok ($! == ENOTCONN || $! == EDESTADDRREQ) || warn "DEBUG: bang = [$!](".($!+0).")";
+ 
+     # Grab the real peer destination.
+     ok my $saddr = $mux->{_fhs}{$sock2}{udp_peer};
