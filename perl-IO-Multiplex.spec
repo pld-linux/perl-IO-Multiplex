@@ -6,7 +6,7 @@
 %define		pdir	IO
 %define		pnam	Multiplex
 Summary:	IO::Multiplex - manage IO on many file handles
-Summary(pl):	IO::Multiplex - zarz±dzanie operacjami we/wy na wielu uchwytach plików
+Summary(pl.UTF-8):   IO::Multiplex - zarzÄ…dzanie operacjami we/wy na wielu uchwytach plikÃ³w
 Name:		perl-IO-Multiplex
 Version:	1.08
 Release:	1
@@ -26,13 +26,13 @@ system call. In addition to maintaining the select loop, it buffers
 all input and output to/from the file handles. It can also accept
 incoming connections on one or more listen sockets.
 
-%description -l pl
-Modu³ IO::Multiplex zosta³ zaprojektowany jako próba zarz±dzania
-wieloma uchwytami plików. Jest przede wszystkim naprawdê fantazyjnym
-frontendem do wywo³ania systemowego select. Oprócz zarz±dzania pêtl±
-wywo³añ select, buforuje ca³e wej¶cie i wyj¶cie do/z uchwytów plików.
-Mo¿e tak¿e akceptowaæ przychodz±ce po³±czenia z jednego lub wiêcej
-nas³uchuj±cych gniazd.
+%description -l pl.UTF-8
+ModuÅ‚ IO::Multiplex zostaÅ‚ zaprojektowany jako prÃ³ba zarzÄ…dzania
+wieloma uchwytami plikÃ³w. Jest przede wszystkim naprawdÄ™ fantazyjnym
+frontendem do wywoÅ‚ania systemowego select. OprÃ³cz zarzÄ…dzania pÄ™tlÄ…
+wywoÅ‚aÅ„ select, buforuje caÅ‚e wejÅ›cie i wyjÅ›cie do/z uchwytÃ³w plikÃ³w.
+MoÅ¼e takÅ¼e akceptowaÄ‡ przychodzÄ…ce poÅ‚Ä…czenia z jednego lub wiÄ™cej
+nasÅ‚uchujÄ…cych gniazd.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
