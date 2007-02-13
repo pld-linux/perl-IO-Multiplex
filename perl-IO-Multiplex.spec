@@ -6,7 +6,7 @@
 %define		pdir	IO
 %define		pnam	Multiplex
 Summary:	IO::Multiplex - manage IO on many file handles
-Summary(pl.UTF-8):   IO::Multiplex - zarządzanie operacjami we/wy na wielu uchwytach plików
+Summary(pl.UTF-8):	IO::Multiplex - zarządzanie operacjami we/wy na wielu uchwytach plików
 Name:		perl-IO-Multiplex
 Version:	1.08
 Release:	1
